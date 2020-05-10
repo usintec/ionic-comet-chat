@@ -11,5 +11,11 @@ export class TabsPage implements OnInit {
 
   ngOnInit() {
   }
+  tappedOnTap2() {
+    console.log('tapped on tap 2');
+  }
 
+  tappedOnTap1() {
+    console.log('tapped on tap 1');
+  }
 }
