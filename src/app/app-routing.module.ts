@@ -11,6 +11,38 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'chat-view',
+    loadChildren: () => import('./chat-view/chat-view.module').then( m => m.ChatViewPageModule)
+  },
+  {
+    path: 'groupchat-view',
+    loadChildren: () => import('./groupchat-view/groupchat-view.module').then( m => m.GroupchatViewPageModule)
+  },
+  {
+    path: 'blocked-users',
+    loadChildren: () => import('./blocked-users/blocked-users.module').then( m => m.BlockedUsersPageModule)
+  },
+  {
+    path: 'image-viewer',
+    loadChildren: () => import('./component/image-viewer/image-viewer.module').then( m => m.ImageViewerPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'tab1',
+    loadChildren: () => import('./pages/tab1/tab1.module').then( m => m.Tab1PageModule)
+  },
+  {
+    path: 'tab2',
+    loadChildren: () => import('./pages/tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
 ];
 
 @NgModule({
