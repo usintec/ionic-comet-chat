@@ -5,9 +5,32 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'tab1',
+        loadChildren: '../tab1/tab1.module#Tab1PageModule'
+      },
+      {
+        path: 'tab2',
+        loadChildren: '../tab2/tab2.module#Tab2PageModule'
+      }
+    ]
+  },
+  {
     path: '',
-    component: TabsPage
-  }
+    redirectTo: 'tabs/tab1',
+    pathMatch: 'full'
+  },
+  { path: 'blocked-users',
+    loadChildren: '../../blocked-users/blocked-users.module#BlockedUsersPageModule'
+  },
+  {
+    path: 'redirectToTabs',
+    redirectTo: 'tabs/tab1',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -23,26 +23,26 @@ const routes: Routes = [
     path: 'groupchat-view',
     loadChildren: () => import('./groupchat-view/groupchat-view.module').then( m => m.GroupchatViewPageModule)
   },
-  {
-    path: 'blocked-users',
-    loadChildren: () => import('./blocked-users/blocked-users.module').then( m => m.BlockedUsersPageModule)
-  },
-  {
-    path: 'image-viewer',
-    loadChildren: () => import('./component/image-viewer/image-viewer.module').then( m => m.ImageViewerPageModule)
-  },
+  // {
+  //   path: 'blocked-users',
+  //   loadChildren: () => import('./blocked-users/blocked-users.module').then( m => m.BlockedUsersPageModule)
+  // },
+  // {
+  //   path: 'image-viewer',
+  //   loadChildren: () => import('./component/image-viewer/image-viewer.module').then( m => m.ImageViewerPageModule)
+  // },
   {
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
-  {
-    path: 'tab1',
-    loadChildren: () => import('./pages/tab1/tab1.module').then( m => m.Tab1PageModule)
-  },
-  {
-    path: 'tab2',
-    loadChildren: () => import('./pages/tab2/tab2.module').then( m => m.Tab2PageModule)
-  },
+  // {
+  //   path: 'tab1',
+  //   loadChildren: () => import('./pages/tab1/tab1.module').then( m => m.Tab1PageModule)
+  // },
+  // {
+  //   path: 'tab2',
+  //   loadChildren: () => import('./pages/tab2/tab2.module').then( m => m.Tab2PageModule)
+  // },
 ];
 
 @NgModule({
