@@ -3,7 +3,7 @@ import { CometChat } from '@cometchat-pro/cordova-ionic-chat';
 import { NavigationExtras, Router } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
 import { PopoverController } from '@ionic/angular';
-//import { PopoverPage } from '../popoverpage/popoverpage';
+import { PopoverPage } from '../../popoverpage/popoverpage';
 
 @Component({
   selector: 'app-tab1',
@@ -166,15 +166,15 @@ export class Tab1Page implements OnInit {
     }
   }
 
-  // async openMenu(myEvent) {
+  async openMenu(myEvent) {
 
-  //   const popover = await this.popoverCtrl.create({
-  //     component: PopoverPage,
-  //     event: myEvent
-  //   });
+    const popover = await this.popoverCtrl.create({
+      component: PopoverPage,
+      event: myEvent
+    });
 
-  //   popover.present();
+    popover.present();
 
-  // }
+  }
 
 }

@@ -3,7 +3,7 @@ import { NavController } from '@ionic/angular';
 import { CometChat } from '@cometchat-pro/cordova-ionic-chat';
 import { NavigationExtras, Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
-//import { PopoverPage } from '../popoverpage/popoverpage';
+import { PopoverPage } from '../../popoverpage/popoverpage';
 
 @Component({
   selector: 'app-tab2',
@@ -108,13 +108,13 @@ export class Tab2Page implements OnInit {
 
   }
 
-  // async openMenu(myEvent) {
-  //   console.log('menu:', myEvent);
-  //   const popover = await this.popoverCtrl.create({
-  //     component: PopoverPage,
-  //     event: myEvent
-  //   });
-  //   return await popover.present();
-  // }
+  async openMenu(myEvent) {
+    console.log('menu:', myEvent);
+    const popover = await this.popoverCtrl.create({
+      component: PopoverPage,
+      event: myEvent
+    });
+    return await popover.present();
+  }
 
 }

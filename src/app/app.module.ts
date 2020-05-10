@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-//import { PopoverPage } from '../app/pages/popoverpage/popoverpage';
+import { PopoverPage } from './popoverpage/popoverpage';
 
 import {IonicStorageModule} from '@ionic/storage';
 
@@ -21,10 +21,10 @@ import { ImageViewerComponent } from './component/image-viewer/image-viewer.comp
 @NgModule({
   declarations: [
     AppComponent,
-    //PopoverPage,
+    PopoverPage,
     ImageViewerComponent],
   entryComponents: [ 
-    //PopoverPage,
+    PopoverPage,
     ImageViewerComponent],
   imports: [BrowserModule, IonicModule.forRoot(),  IonicStorageModule.forRoot(), AppRoutingModule],
   providers: [
